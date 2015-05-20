@@ -1,0 +1,23 @@
+{
+  "name": "promise",
+  "version": "0.0.1",
+  "description": "Peter's work with Promises/A+ implementation",
+  "main": "index.js",
+  "author": {
+    "name": "Peter"
+  },
+  "_id": "promise@0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+  },
+  "maintainers": [
+    {
+      "name": "Peter"
+    }
+  ],
+  "readme": "",
+  "homepage": ""
+}
