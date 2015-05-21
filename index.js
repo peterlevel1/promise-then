@@ -8,7 +8,7 @@ if (typeof process === 'object' && process && process.nextTick) nextTick = proce
 else if (typeof setImediate === 'function') nextTick = setImediate;
 else nextTick = function(cb) {setTimeout(cb, 0);};
 
-var isPromise = function (obj) { return obj && obj.then && typeof obj.then === 'function'; };
+var isPromise = function (obj) { return obj && typeof obj.then === 'function'; };
 var noop = function (){};
 var defaultReject = function (reason){ return reason; };
 
