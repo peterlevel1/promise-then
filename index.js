@@ -273,6 +273,10 @@
     Promise.debugType = type;
   };
 
+  Promise.extend = function (newOpts, srcOpts) {
+    return extendObject(newOpts, srcOpts);
+  };
+
   Promise.error = function (err) {
     throw new Error(err);
   };
