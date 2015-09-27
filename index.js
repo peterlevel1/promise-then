@@ -232,8 +232,7 @@
       console.warn(self);
       throw error;
     }
-    else if (!self.isRejected() &&
-      typeof self._promiseState.failCallback === 'function') {
+    else if (!self.isSolving()) {
       self.reject(error);
     }
   };
