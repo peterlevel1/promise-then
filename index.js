@@ -694,8 +694,6 @@
   };
 
   Promise.prototype.whenOneResolved = function (n, timeout, fn /*... promises */) {
-    var self = this;
-
     return judgeWhen.apply(null, [this, function (arr) {
       var array = filterWhenResults(arr);
 
