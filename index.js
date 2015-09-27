@@ -372,7 +372,7 @@
 
     return allArePromise &&
       ( !results.length ? true : results );
-  };
+  }
 
   function handleOnePromise(state, o, v) {
     if (!~['resolve', 'reject', 'notify'].indexOf(state)) {
@@ -540,7 +540,7 @@
     });
 
     return who;
-  };
+  }
 
   Promise.prototype.waterFall = function (commitments) {
     return raceOrWaterFall(this, false, arguments);
@@ -626,8 +626,13 @@
       commitments = pickArray(slice.call(arguments, index)),
       opts = {};
 
-    typeof timeout === 'number' && (opts.timeout = timeout);
-    typeof fn === 'function' && (opts.timeoutCallback = fn);
+    if (typeof timeout === 'number') {
+      opts.timeout = timeout;
+    }
+
+    if (typeof fn === 'function') {
+      opts.timeoutCallback = fn;
+    }
 
     new Promise(opts)
       .when(commitments)
